@@ -1,13 +1,16 @@
 module.exports = {
   siteMetadata: {
-    siteUrl: `https://www.yourdomain.tld`
+    siteUrl: `https://www.yourdomain.tld`,
   },
-  plugins: ["gatsby-plugin-mdx", {
-    resolve: 'gatsby-source-filesystem',
-    options: {
-      "name": "pages",
-      "path": "./src/pages/"
+  plugins: [
+    "gatsby-plugin-mdx",
+    {
+      resolve: "gatsby-source-filesystem",
+      options: {
+        name: "pages",
+        path: "./src/pages/",
+      },
+      __key: "pages",
     },
-    __key: "pages"
-  }]
-};
+  ],
+}
