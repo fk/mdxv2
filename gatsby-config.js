@@ -5,8 +5,10 @@ module.exports = {
   plugins: [
     {
       resolve: "gatsby-plugin-mdx",
-      mdxOptions: {
-        remarkPlugins: [remarkGfm],
+      options: {
+        mdxOptions: {
+          remarkPlugins: [require("./wrap-remark-gfm.js")],
+        },
       },
     },
     {
