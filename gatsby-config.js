@@ -3,7 +3,12 @@ module.exports = {
     siteUrl: `https://www.yourdomain.tld`,
   },
   plugins: [
-    "gatsby-plugin-mdx",
+    {
+      resolve: "gatsby-plugin-mdx",
+      mdxOptions: {
+        remarkPlugins: [remarkGfm],
+      },
+    },
     {
       resolve: "gatsby-source-filesystem",
       options: {
